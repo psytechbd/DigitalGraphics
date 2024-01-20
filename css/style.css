@@ -385,6 +385,17 @@ ul{padding: 0;}
     .copyright {
         padding: 10px;
     }
+    .carousel-item{
+        background-color: #0b162a;
+        background-blend-mode: multiply;
+    }
+    .banner-title {
+        font-size: 24px;
+        padding: 40px;
+    }
+    .float-right{
+        margin-right: 40px !important;
+    }
 }
 
 
