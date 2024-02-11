@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+  <!-- Lightbox JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Product Image with Lightbox -->
+      <a href="images/businesscard.jpg" data-toggle="lightbox" data-gallery="product-gallery">
+        <img src="images/businesscard.jpg" class="img-fluid" id="main-image">
+      </a>
+      <!-- Thumbnails -->
+      <div class="row mt-3" id="thumbnail-container">
+        <div class="col">
+          <img src="images/businesscard.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this)">
+        </div>
+        <div class="col">
+          <img src="images/1.png" class="img-fluid thumbnail" onclick="changeMainImage(this)">
+        </div>
+        <!-- Add more thumbnails as needed -->
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Product Information -->
+      <h2>Product Name</h2>
+      <p>Description of the product.</p>
+      <!-- Product Quantity Form -->
+      <form>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+        </div>
+        <!-- File Upload Form -->
+        <div class="form-group">
+          <label for="file">Upload File:</label>
+          <input type="file" class="form-control-file" id="file" name="file">
+        </div>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Add to Cart</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  function changeMainImage(element) {
+    var mainImage = document.getElementById("main-image");
+    var imagePath = element.src;
+    $(mainImage).fadeOut(400, function() {
+      mainImage.src = imagePath;
+      $(mainImage).fadeIn(400);
+    });
+  }
+</script>
+
+</body>
+</html>
