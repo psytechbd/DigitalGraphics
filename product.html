@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,59 +17,153 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .thumbnail {
+      width: 70px;
+      height: 70px;
+      margin-right: 5px;
+    }
+
+    .product-img {
+      width: 500px;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    .row {
+      margin-left: 0;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <!-- Product Image with Lightbox -->
-      <a href="images/businesscard.jpg" data-toggle="lightbox" data-gallery="product-gallery">
-        <img src="images/businesscard.jpg" class="img-fluid" id="main-image">
-      </a>
-      <!-- Thumbnails -->
-      <div class="row mt-3" id="thumbnail-container">
-        <div class="col">
-          <img src="images/businesscard.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this)">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Product Image with Lightbox -->
+        <a href="images/businesscard.jpg" data-toggle="lightbox" data-gallery="product-gallery">
+          <img src="images/businesscard.jpg" class="img-fluid product-img" id="main-image">
+        </a>
+        <!-- Thumbnails -->
+        <div class="row mt-3" id="thumbnail-container">
+
+          <img src="images/businesscard.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this, '1')">
+
+
+          <img src="images/card2.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this, '2')">
+
+
+          <img src="images/card3.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this, '3')">
+
+          <!-- Add more thumbnails as needed -->
         </div>
-        <div class="col">
-          <img src="images/1.png" class="img-fluid thumbnail" onclick="changeMainImage(this)">
-        </div>
-        <!-- Add more thumbnails as needed -->
+      </div>
+      <div class="col-md-6">
+        <!-- Product Information -->
+        <h2>Product Name</h2>
+        <p>Description of the product.</p>
+        <!-- Product Quantity Form -->
+        <form>
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+          </div>
+          <div class="form-group">
+            <label for="productVariant">Card Type</label>
+            <select class="form-control" id="productVariant" onchange="changeMainImageByVariant()">
+              <option value="1">Rectangle</option>
+              <option value="2">Plastic</option>
+              <option value="3">Rounded</option>
+              <!-- Add more variants as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="size">Size:</label>
+            <select class="form-control">
+              <option value="235">2" x 3.5"</option>
+              <option value="335">3" x 3.5"</option>
+              <option value="33">3" x 3"</option>
+              <!-- Add more variants as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="size">Print on:</label>
+            <select class="form-control">
+              <option value="235">Front Side</option>
+              <option value="335">Both Side</option>
+              <!-- Add more variants as needed -->
+            </select>
+          </div>
+          <!-- File Upload Form -->
+          <div class="row ">
+            <div class="col-3">
+              <div class="form-group">
+                <label for="file">Have Design?</label><br>
+                <p id="upfile1" class="btn btn-info">Upload</p>
+                <input type="file" multiple id="file1" name="file1" style="display:none" />
+              </div>
+            </div>
+            <div class="col text-center">
+              <h5>Or</h5>
+            </div>
+            <div class="col-5 text-left">
+              <div class="form-group">
+                <label for="file">Don't Have Design?</label><br>
+                <button id="upfile1" class="btn btn-info btn-block">Custom Design</button>
+                
+              </div>
+            </div>
+            
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+        </form>
       </div>
     </div>
-    <div class="col-md-6">
-      <!-- Product Information -->
-      <h2>Product Name</h2>
-      <p>Description of the product.</p>
-      <!-- Product Quantity Form -->
-      <form>
-        <div class="form-group">
-          <label for="quantity">Quantity:</label>
-          <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
-        </div>
-        <!-- File Upload Form -->
-        <div class="form-group">
-          <label for="file">Upload File:</label>
-          <input type="file" class="form-control-file" id="file" name="file">
-        </div>
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Add to Cart</button>
-      </form>
-    </div>
   </div>
-</div>
 
-<script>
-  function changeMainImage(element) {
-    var mainImage = document.getElementById("main-image");
-    var imagePath = element.src;
-    $(mainImage).fadeOut(400, function() {
-      mainImage.src = imagePath;
-      $(mainImage).fadeIn(400);
+  <script>
+    $("#upfile1").click(function () {
+      $("#file1").trigger('click');
     });
-  }
-</script>
+    function changeMainImage(element, variant) {
+      var mainImage = document.getElementById("main-image");
+      var select = document.getElementById("productVariant");
+      var selectValue = variant;
+      var imagePath = element.src;
+
+      // Update select option
+      select.value = selectValue;
+
+      // Fade out the main image, change src, and fade it back in
+      $(mainImage).fadeOut(400, function () {
+        mainImage.src = imagePath;
+        $(mainImage).fadeIn(400);
+      });
+    }
+
+    function changeMainImageByVariant() {
+      var mainImage = document.getElementById("main-image");
+      var selectedVariant = document.getElementById("productVariant").value;
+      var imagePath = "";
+      // Update imagePath based on selectedVariant
+      if (selectedVariant === "1") {
+        imagePath = "images/businesscard.jpg";
+      } else if (selectedVariant === "2") {
+        imagePath = "images/card2.jpg";
+      } else if (selectedVariant === "3") {
+        imagePath = "images/card3.jpg";
+      }
+
+      // Fade out the main image, change src, and fade it back in
+      $(mainImage).fadeOut(400, function () {
+        mainImage.src = imagePath;
+        $(mainImage).fadeIn(400);
+      });
+    }
+  </script>
 
 </body>
+
 </html>
