@@ -17,6 +17,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     .thumbnail {
       width: 70px;
@@ -37,8 +38,187 @@
 </head>
 
 <body>
-
   <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="product.html"><img src="images/Logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Designer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">My account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- mega menu -->
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top sub-nav">
+    <div class="container">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_nav"
+            aria-controls="mobile_nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mobile_nav">
+            
+            <ul class="navbar-nav navbar-light">
+                <!-- <li class="nav-item"><a class="nav-link" href="product.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="product.html">About Us</a></li>
+                <li class="nav-item dmenu dropdown">
+                    <a class="nav-link dropdown-toggle" href="product.html" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu sm-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="product.html">Software Development</a>
+                        <a class="dropdown-item" href="product.html">Web Designing & Development</a>
+                        <a class="dropdown-item" href="product.html">Mobile Application</a>
+                        <a class="dropdown-item" href="product.html">Business Solutions & Business Process</a>
+                        <a class="dropdown-item" href="product.html">Digital Marketing & SEO Services</a>
+                        <a class="dropdown-item" href="product.html">Web Hosting & Maintenance</a>
+                        <a class="dropdown-item" href="product.html">Cyber Security</a>
+                        <a class="dropdown-item" href="product.html">Block Chain Implementation</a>
+                        <a class="dropdown-item" href="product.html">Big Data</a>
+                    </div>
+                </li> -->
+                <!--========-->
+                <li class="nav-item dropdown megamenu-li dmenu">
+                    <a class="nav-link dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">Business Card</a>
+                    <div class="dropdown-menu megamenu sm-menu border-top" aria-labelledby="dropdown01">
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                <h6>Ecommerce</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-magento"></i> Magento
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-magento"></i> Magento 2
+                                    Migration</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-magento"></i> Odoo ERP</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-magento"></i> Mobile Commerce</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-magento"></i> CRM for
+                                    Commerce</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                <h6>LAMP Technology</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-php"></i> PHP Website
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-circle"></i> Phalcon
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-laravel"></i> Laravel
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-wordpress-simple"></i> WordPress
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-php"></i> Symfony Development</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                <h6>Mobile</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-apple"></i> iPhone App
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-android"></i> Android App
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-mobile-alt"></i> Phone Gap App
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-tablet-alt"></i> Hybrid App
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-mobile-alt"></i> Ionic
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-tablet-alt"></i> React Native
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-mobile-alt"></i> Xamarin App
+                                    Development</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3 mb-4">
+                                <h6>Node.js & MongoDB</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-cubes"></i> Full Stack
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-cube"></i> MEAN Stack</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-angular"></i> AngularJS</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-node-js"></i> Node.JS
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-leaf fa-rotate-90"></i> MongoDB
+                                    Development</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                <h6>Microsoft Technology</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-windows"></i> Microsoft App
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-windows"></i> MS Desktop App
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-windows"></i> SharePoint
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-windows"></i> ASP.NET
+                                    Development</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-windows"></i> CMS Development</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                <h6>Cloud Services</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-cloud"></i> DevOps</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-amazon"></i> Amazon Web
+                                    Services</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-windows"></i> Azure Cloud
+                                    Service</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-google"></i> Google App Engine
+                                    Services</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3 border-right mb-4">
+                                <h6>Enterprise Services</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-laptop"></i> Augmented
+                                    Reality</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-laptop"></i> CRM</a>
+                                <a class="dropdown-item" href="product.html"><i class="fab fa-buromobelexperte"></i> Enterprise
+                                    Mobility Services</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-th-large"></i> Blockchain
+                                    Services</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-briefcase"></i> Business
+                                    Intelligence</a>
+                            </div>
+                            <div class="col-sm-6 col-lg-3 mb-4">
+                                <h6>Digital Marketing</h6>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-laptop"></i> Digital
+                                    Marketing</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-laptop"></i> PPC Management
+                                    Services</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-laptop"></i> E-commerce SEO
+                                    Services</a>
+                                <a class="dropdown-item" href="product.html"><i class="fas fa-laptop"></i> Conversion Rate
+                                    Optimization</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--=========-->
+                <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>portfolio.php">Portfolio</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>career.php">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo siteURL;?>contact-us.php">Contact us</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+  <div class="container mt-5">
     <div class="row">
       <div class="col-md-6">
         <!-- Product Image with Lightbox -->
@@ -88,6 +268,18 @@
             </select>
           </div>
           <div class="form-group">
+            <label for="size">Paper Type:</label>
+            <select class="form-control">
+              <option value="235">14 pt. Cardstock Gloss</option>
+              <option value="335">14 pt. Cardstock Matte</option>
+              <option value="33">16 pt. Cardstock Gloss</option>
+              <option value="33">16 pt. Cardstock Matte</option>
+              <option value="33">16 pt. Cardstock Soft Touch</option>
+              <option value="33">17 pt. Cardstock Uncoated</option>
+              <!-- Add more variants as needed -->
+            </select>
+          </div>
+          <div class="form-group">
             <label for="size">Print on:</label>
             <select class="form-control">
               <option value="235">Front Side</option>
@@ -115,6 +307,10 @@
               </div>
             </div>
             
+            
+          </div>
+          <div>
+            <h2 id="price" class="text-right text-success font-bold">$24.00</h2>
           </div>
           <!-- Submit Button -->
           <button type="submit" class="btn btn-primary btn-block">Place Order</button>
@@ -163,7 +359,32 @@
       });
     }
   </script>
+ <script>
+  $(document).ready(function () {
+      // Mouseover event handler
+      $('.nav-item.dropdown').mouseover(function () {
+          var dropdownMenu = $(this).find('.dropdown-menu').first();
+          if (dropdownMenu.length > 0) {
+              dropdownMenu.addClass('show');
+          } else {
+              console.error('Dropdown menu not found');
+          }
+      });
 
+      // Mouseout event handler
+      $('.nav-item.dropdown').mouseout(function () {
+          var dropdownMenu = $(this).find('.dropdown-menu').first();
+          if (dropdownMenu.length > 0) {
+              dropdownMenu.removeClass('show');
+          }
+      });
+
+      // Prevent the dropdown menu from closing when clicked inside the megamenu
+      $(".megamenu").on("click", function (e) {
+          e.stopPropagation();
+      });
+  });
+</script>
 </body>
 
 </html>

@@ -9,7 +9,132 @@
 body {
     overflow-x: hidden;
   }
+/* nav */
+.navbar {
+    background: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* box-shadow: 1px 3px 4px 0 #adadad33; */
+}
 
+.navbar-light .navbar-brand {
+    color: #1B3058;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #1B3058;
+    
+
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: #1B3058;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    transition: 0.3s;
+    padding-left: 24px;
+    padding-right: 24px;
+    font-size: 14px;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    background: #1B3058;
+    transition: 0.3s;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #1B3058 !important;
+}
+
+.sm-menu {
+    border-radius: 0px;
+    border: 0px;
+    top: 97%;
+    box-shadow: rgba(173, 173, 173, 0.2) 1px 3px 4px 0px;
+}
+
+.dropdown-item {
+    color: #3c3c3c;
+    font-size: 14px;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #1B3058;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.navbar-tog {
+    color: #1B3058;
+}
+
+.megamenu-li {
+    position: static;
+}
+
+
+
+.megamenu h6 {
+    margin-left: 21px;
+}
+
+.megamenu i {
+    width: 20px;
+}
+   /* Custom styles for mega menu */
+   .megamenu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+.mega-menu {
+position: static !important;
+background: white;
+}
+
+.mega-menu .dropdown-menu {
+width: 100%;
+padding: 20px;
+columns: 3;
+-webkit-columns: 3;
+-moz-columns: 3;
+display: none; /* Hide submenu by default */
+}
+
+.mega-menu .dropdown-menu.show {
+display: block; /* Show submenu when class 'show' is added */
+}
+
+.mega-menu .dropdown-menu a {
+display: block;
+color: #333;
+padding: 5px 0;
+text-decoration: none;
+}
+.sub-nav{
+background: #dcdcdc;
+}
+/* nav */
 .carousel {
     margin-bottom: 50px !important;
 }
