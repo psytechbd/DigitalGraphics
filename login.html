@@ -311,98 +311,28 @@
     <div class="row">
       <div class="col-md-6">
         <!-- Product Image with Lightbox -->
-        <a href="images/businesscard.jpg" data-toggle="lightbox" data-gallery="product-gallery">
-          <img src="images/businesscard.jpg" class="img-fluid product-img" id="main-image">
-        </a>
+        
+          <img src="images/Login-man.jpg" class="img-fluid product-img" id="main-image">
+        
         <!-- Thumbnails -->
-        <div class="row mt-3" id="thumbnail-container">
-
-          <img src="images/businesscard.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this, '1')">
-
-
-          <img src="images/card2.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this, '2')">
-
-
-          <img src="images/card3.jpg" class="img-fluid thumbnail" onclick="changeMainImage(this, '3')">
-
-          <!-- Add more thumbnails as needed -->
-        </div>
+        
       </div>
       <div class="col-md-6">
         <!-- Product Information -->
-        <h2>Stander Business Card</h2>
-        <p>First choice Business cards</p>
+        <h2>Login</h2>
         <!-- Product Quantity Form -->
         <form>
           <div class="form-group">
-            <label for="quantity">Quantity:</label>
-            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+            <label for="quantity">Email:</label>
+            <input type="text" class="form-control" >
           </div>
           <div class="form-group">
-            <label for="productVariant">Card Type</label>
-            <select class="form-control" id="productVariant" onchange="changeMainImageByVariant()">
-              <option value="1">Rectangle</option>
-              <option value="2">Plastic</option>
-              <option value="3">Rounded</option>
-              <!-- Add more variants as needed -->
-            </select>
+            <label for="quantity">Password:</label>
+            <input type="password" class="form-control" >
           </div>
-          <div class="form-group">
-            <label for="size">Size:</label>
-            <select class="form-control" id="sizeVariant" onchange="changeMainImageByVariant()">
-              <option value="1">2" x 3.5"</option>
-              <option value="2">3" x 3.5"</option>
-              <option value="3">3" x 3"</option>
-              <!-- Add more variants as needed -->
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="size">Paper Type:</label>
-            <select class="form-control">
-              <option value="235">14 pt. Cardstock Gloss</option>
-              <option value="335">14 pt. Cardstock Matte</option>
-              <option value="33">16 pt. Cardstock Gloss</option>
-              <option value="33">16 pt. Cardstock Matte</option>
-              <option value="33">16 pt. Cardstock Soft Touch</option>
-              <option value="33">17 pt. Cardstock Uncoated</option>
-              <!-- Add more variants as needed -->
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="size">Print on:</label>
-            <select class="form-control">
-              <option value="235">Front Side</option>
-              <option value="335">Both Side</option>
-              <!-- Add more variants as needed -->
-            </select>
-          </div>
-          <!-- File Upload Form -->
-          <div class="row ">
-            <div class="col-3">
-              <div class="form-group">
-                <label for="file">Have Design?</label><br>
-                <p id="upfile1" class="btn btn-info">Upload</p>
-                <input type="file" multiple id="file1" name="file1" style="display:none" />
-              </div>
-            </div>
-            <div class="col text-center">
-              <h5>Or</h5>
-            </div>
-            <div class="col-5 text-left">
-              <div class="form-group">
-                <label for="file">Don't Have Design?</label><br>
-                <button id="upfile1" class="btn btn-info btn-block">Custom Design</button>
-
-              </div>
-            </div>
-
-
-          </div>
-          <div>
-            <h2 id="price" class="text-right text-success font-bold">$24.00</h2>
-          </div>
+         <p>Don't have account? <span class="text-success">Register</span> </p>
           <!-- Submit Button -->
-          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#exampleModal">Place Order</button>
+          <a  href="https://digitalgraphic.peoplesflight.com/customer/index.html" type="button" class="btn btn-primary btn-block">SignIn</a>
           <!-- Button trigger modal -->
           
 
@@ -423,7 +353,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <a href="login.html"  type="button" class="btn btn-primary">Login / Register</a>
+                  <button type="button" class="btn btn-primary">Login / Register</button>
                 </div>
               </div>
             </div>
